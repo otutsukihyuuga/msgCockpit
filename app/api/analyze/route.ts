@@ -35,6 +35,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ email })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Analysis failed'
+    console.error('[/api/analyze]', message)
     return NextResponse.json({ error: message }, { status: 500 })
   }
 }

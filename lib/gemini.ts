@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai'
 import type { AnalyzedEmail, ChatMessage } from './types'
 
 function getModel(apiKey: string) {
-  return new GoogleGenerativeAI(apiKey).getGenerativeModel({ model: 'gemini-2.0-flash' })
+  return new GoogleGenerativeAI(apiKey).getGenerativeModel({ model: 'gemini-3.5-flash' })
 }
 
 export interface AnalysisResult {
